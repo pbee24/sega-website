@@ -1,23 +1,24 @@
-﻿/* ==========================================================================
-   SEGA NGO WEBSITE - UPGRADED PREMIUM PARALLAX STYLESHEET
-   Refined Typography (Bebas Neue + Crimson Pro), Alternating Overlays, Floating Tab
+/* ==========================================================================
+   SEGA NGO WEBSITE - PREMIUM STYLESHEET v3
+   Clean, Elegant Design inspired by Rainforest Trust
    ========================================================================== */
 
 /* --- CSS Variables & Design System --- */
 :root {
-    --primary-green: #f5f8f7;       /* Deepest forest green */
-    --secondary-green: #e8f3f0;     /* Dark jungle green */
-    --accent-green: #1e5c3f;        /* Rich moss green */
-    --bright-green: #2d8a5c;        /* Active leaf green */
-    --accent-terracotta: #c0392b;   /* Brand Terracotta Red */
+    --primary-green: #0a1f14;
+    --secondary-green: #113824;
+    --accent-green: #1e5c3f;
+    --bright-green: #2d8a5c;
+    --accent-terracotta: #c0392b;
     --accent-terracotta-hover: #962d22;
-    --accent-gold: #d4af37;         /* Warm metallic gold for highlights */
-    --bg-cream: #ffffff;            
-    --text-dark: #1a3a30;           
-    --text-light: #ffffff;          
+    --accent-gold: #d4af37;
+    --bg-cream: #f9fbf9;
+    --text-dark: #1a2e23;
+    --text-light: #ffffff;
+    --text-muted: #6b7c72;
     --text-muted-light: rgba(255, 255, 255, 0.7);
     --white: #ffffff;
-    --glass-bg: rgba(10, 31, 20, 0.15);
+    --glass-bg: rgba(10, 31, 20, 0.65);
     --glass-border: rgba(255, 255, 255, 0.12);
     --glass-backdrop: blur(15px);
     --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -39,7 +40,7 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--primary-green); color: var(--text-dark);
+    background-color: var(--primary-green);
     color: var(--white);
     line-height: 1.7;
     overflow-x: hidden;
@@ -255,10 +256,10 @@ img {
 
 .floating-donate-btn:hover {
     background-color: var(--accent-terracotta-hover);
-    padding-bottom: 1.1rem; /* Extends tab slightly on hover */
+    padding-bottom: 1.1rem;
 }
 
-/* --- Header / Navigation (Uneven & Wrapping Fix) --- */
+/* --- Header / Navigation --- */
 .main-header {
     position: fixed;
     top: 0;
@@ -273,7 +274,7 @@ img {
 }
 
 .main-header.scrolled {
-    background-color: var(--primary-green); color: var(--text-dark);
+    background-color: var(--primary-green);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     padding: 0;
 }
@@ -295,16 +296,18 @@ img {
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 1rem;
     flex-shrink: 0;
 }
 
-.logo-img { height: 65px;
+.logo-img {
+    height: 72px;
     width: auto;
     object-fit: contain;
     background-color: var(--white);
     border-radius: 50%;
-    padding: 2px;
+    padding: 3px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .logo-text {
@@ -312,15 +315,19 @@ img {
     flex-direction: column;
 }
 
-.logo-title { font-size: 2.4rem; /* Premium bold caps */
+.logo-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.8rem;
     color: var(--white);
     line-height: 0.95;
-    letter-spacing: 1.5px;
+    letter-spacing: 3px;
 }
 
-.logo-subtitle { font-size: 0.9rem; /* Elegant serif subtitle */
-    color: rgba(255, 255, 255, 0.8);
-    letter-spacing: 0.2px;
+.logo-subtitle {
+    font-family: 'Crimson Pro', serif;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.85);
+    letter-spacing: 0.3px;
     margin-top: 2px;
     font-weight: 500;
     white-space: nowrap;
@@ -329,14 +336,14 @@ img {
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 1rem; /* Tightened gap to prevent wrapping */
+    gap: 1rem;
 }
 
 .nav-link {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 0.78rem; /* Compact size */
-    text-transform: uppercase; /* ALL CAPS navigation */
+    font-size: 0.78rem;
+    text-transform: uppercase;
     letter-spacing: 1px;
     color: rgba(255, 255, 255, 0.8);
     position: relative;
@@ -365,7 +372,7 @@ img {
 
 .nav-btn {
     margin-left: 0.25rem;
-    padding: 0.5rem 1.15rem; /* Sleek button */
+    padding: 0.5rem 1.15rem;
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -393,7 +400,7 @@ img {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Parallax */
+    background-attachment: fixed;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -461,13 +468,14 @@ img {
 }
 
 .stats-container {
-    background-color: var(--white);
-    box-shadow: 0 20px 50px rgba(10, 31, 20, 0.15);
+    background-color: var(--primary-green);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
     border-radius: var(--border-radius);
     padding: 2.5rem 2rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border: 1px solid rgba(255,255,255,0.08);
     border-bottom: 5px solid var(--accent-gold);
 }
 
@@ -481,7 +489,7 @@ img {
     font-family: 'Poppins', sans-serif;
     font-size: 2.75rem;
     font-weight: 800;
-    color: var(--secondary-green);
+    color: var(--accent-gold);
     line-height: 1;
     margin-bottom: 0.4rem;
     letter-spacing: -0.03em;
@@ -491,76 +499,76 @@ img {
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.6);
     font-weight: 600;
 }
 
 .stat-divider {
     width: 1px;
     height: 55px;
-    background-color: rgba(10, 31, 20, 0.08);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* --- Section Parallax & Alternating Overlays (Forest Green, Terracotta Red, Transparent) --- */
+/* --- Section Parallax & Alternating Overlays --- */
 .about-section,
 .mission-section,
 .certifications-section,
 .support-matters-section,
 .projects-section,
 .bbnda-collaboration-section,
-.funding-section,
+.future-projects-section,
 .donate-section,
 .contact-section {
     position: relative;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Parallax */
+    background-attachment: fixed;
     padding: 8rem 0;
     color: var(--white);
 }
 
-/* 1. Transparent Photo Sections (Highly visible photos with glass panels) */
+/* Sections with heavy dark overlay for readability */
 .about-section {
-    background-image: linear-gradient(rgba(10, 31, 20, 0.1), rgba(10, 31, 20, 0.1)), url('images/DSC05399.jpg');
+    background-image: linear-gradient(rgba(10, 31, 20, 0.82), rgba(10, 31, 20, 0.88)), url('images/DSC05399.jpg');
     padding-top: 12rem;
 }
 
 .support-matters-section {
-    background-image: linear-gradient(rgba(10, 31, 20, 0.1), rgba(10, 31, 20, 0.1)), url('images/DSC05406.jpg');
+    background-image: linear-gradient(rgba(10, 31, 20, 0.82), rgba(10, 31, 20, 0.88)), url('images/IMG_3794.jpg');
 }
 
 .projects-section {
-    background-image: linear-gradient(rgba(10, 31, 20, 0.15), rgba(10, 31, 20, 0.15)), url('images/handakundi_4.jpg');
+    background-image: linear-gradient(rgba(10, 31, 20, 0.85), rgba(10, 31, 20, 0.9)), url('images/handakundi top.jpg');
 }
 
 .contact-section {
-    background-image: linear-gradient(rgba(10, 31, 20, 0.45), rgba(10, 31, 20, 0.45)), url('images/DSC05406.jpg');
+    background-image: linear-gradient(rgba(10, 31, 20, 0.85), rgba(10, 31, 20, 0.9)), url('images/IMG_3611.jpg');
 }
 
-/* 2. Terracotta Red Sections (Switched up with red brand gradients) */
+/* Terracotta accent sections */
 .certifications-section {
-    background-image: linear-gradient(rgba(139, 0, 0, 0.25), rgba(10, 31, 20, 0.95)), url('images/IMG_3794.jpg');
+    background-image: linear-gradient(rgba(100, 15, 10, 0.85), rgba(10, 31, 20, 0.92)), url('images/IMG_3794.jpg');
 }
 
 .bbnda-collaboration-section {
-    background-image: linear-gradient(rgba(139, 0, 0, 0.3), rgba(10, 31, 20, 0.95)), url('images/handakundi_2.jpg');
+    background-image: linear-gradient(rgba(100, 15, 10, 0.85), rgba(10, 31, 20, 0.92)), url('images/handakundi_2.jpg');
 }
 
 .donate-section {
-    background-image: linear-gradient(rgba(139, 0, 0, 0.3), rgba(10, 31, 20, 0.95)), url('images/neripul_5.JPG');
+    background-image: linear-gradient(rgba(100, 15, 10, 0.85), rgba(10, 31, 20, 0.92)), url('images/neripul_5.JPG');
 }
 
-/* 3. Forest Green Sections */
+/* Forest green sections */
 .mission-section {
-    background-image: linear-gradient(rgba(10, 31, 20, 0.3), rgba(10, 31, 20, 0.3)), url('images/gallery_1.jpg');
+    background-image: linear-gradient(rgba(10, 31, 20, 0.88), rgba(10, 31, 20, 0.92)), url('images/gallery_1.jpg');
 }
 
-.funding-section {
-    background-image: linear-gradient(rgba(10, 31, 20, 0.3), rgba(10, 31, 20, 0.3)), url('images/handakundi_3.jpg');
+.future-projects-section {
+    background-image: linear-gradient(rgba(10, 31, 20, 0.88), rgba(10, 31, 20, 0.92)), url('images/DSC05406.jpg');
 }
 
-/* --- Glass Panels for Transparent Sections --- */
+/* --- Glass Panels --- */
 .glass-panel {
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
@@ -629,6 +637,19 @@ img {
     z-index: 3;
 }
 
+.badge-num {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.badge-text {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0.25rem;
+}
+
 .about-paragraph {
     font-size: 0.98rem;
     color: rgba(255, 255, 255, 0.85);
@@ -647,15 +668,15 @@ img {
     line-height: 1.5;
 }
 
-/* --- Our Mission Section (Glassmorphic Cards) --- */
+/* --- Our Mission Section --- */
 .mission-grid {
     margin-top: 4rem;
     gap: 2rem;
 }
 
 .mission-card {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     backdrop-filter: var(--glass-backdrop);
     -webkit-backdrop-filter: var(--glass-backdrop);
     padding: 2.5rem 2rem;
@@ -669,8 +690,8 @@ img {
 
 .mission-card:hover {
     transform: translateY(-6px);
-    background: rgba(10, 31, 20, 0.2);
-    border-color: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
     box-shadow: 0 15px 30px rgba(0,0,0,0.3);
 }
 
@@ -714,14 +735,14 @@ img {
     line-height: 1.6;
 }
 
-/* --- Certifications Section (Glassmorphic Cards) --- */
+/* --- Certifications Section --- */
 .cert-grid {
     margin-top: 4rem;
 }
 
 .cert-card {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: var(--glass-backdrop);
     -webkit-backdrop-filter: var(--glass-backdrop);
     padding: 2.75rem 2rem;
@@ -733,7 +754,7 @@ img {
 
 .cert-card:hover {
     transform: translateY(-6px);
-    background: rgba(10, 31, 20, 0.25);
+    background: rgba(255, 255, 255, 0.12);
     border-color: rgba(255, 255, 255, 0.25);
     box-shadow: 0 15px 30px rgba(0,0,0,0.3);
 }
@@ -778,6 +799,19 @@ img {
     margin-top: 2rem;
 }
 
+.support-description {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 1.5rem;
+}
+
+.highlight-quote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--accent-gold);
+}
+
 .support-points-col {
     display: flex;
     flex-direction: column;
@@ -785,8 +819,8 @@ img {
 }
 
 .support-point-block {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     backdrop-filter: var(--glass-backdrop);
     padding: 1.15rem 1.5rem;
     border-radius: var(--border-radius-sm);
@@ -814,7 +848,7 @@ img {
     color: var(--white);
 }
 
-/* --- Our Projects Section (Reverted side-by-side thumbnail layout) --- */
+/* --- Our Projects Section --- */
 .projects-container {
     display: flex;
     flex-direction: column;
@@ -848,6 +882,7 @@ img {
     height: 360px;
     box-shadow: 0 15px 30px rgba(0,0,0,0.3);
     border: 4px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
 }
 
 .main-project-img-wrapper img {
@@ -891,6 +926,30 @@ img {
     font-size: 2rem;
     color: var(--white);
     margin-bottom: 0.5rem;
+}
+
+.project-status-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--bright-green);
+    margin-bottom: 0.75rem;
+}
+
+.project-meta-info {
+    font-size: 0.85rem;
+    color: var(--text-muted-light);
+    margin-bottom: 1rem;
+}
+
+.project-text-desc {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.7;
 }
 
 .project-spec-list {
@@ -941,8 +1000,8 @@ img {
 }
 
 .bbnda-mandate-box {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: var(--glass-backdrop);
     padding: 2.25rem;
     border-radius: var(--border-radius);
@@ -978,97 +1037,69 @@ img {
     font-size: 1.1rem;
 }
 
-/* --- Funding Section (Scope Table) --- */
-.table-responsive {
-    width: 100%;
-    overflow-x: auto;
-    margin-top: 3.5rem;
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
+/* --- Future Projects Section --- */
+.future-projects-section {
+    padding: 8rem 0;
+}
+
+.future-grid {
+    margin-top: 4rem;
+    gap: 2rem;
+}
+
+.future-project-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     backdrop-filter: var(--glass-backdrop);
+    -webkit-backdrop-filter: var(--glass-backdrop);
+    padding: 2.5rem 2rem;
     border-radius: var(--border-radius);
+    text-align: center;
+    transition: var(--transition);
+    height: 100%;
 }
 
-.funding-table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: left;
-    font-size: 0.95rem;
+.future-project-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
 }
 
-.funding-table th {
-    background-color: rgba(10, 31, 20, 0.2);
+.future-icon {
+    width: 70px;
+    height: 70px;
+    background-color: var(--accent-terracotta);
     color: var(--white);
-    padding: 1.25rem 2rem;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 1rem;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+    transition: var(--transition);
 }
 
-.funding-table td {
-    padding: 1.75rem 2rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    vertical-align: top;
-    color: rgba(255, 255, 255, 0.9);
+.future-project-card:hover .future-icon {
+    transform: scale(1.1);
 }
 
-.funding-table td ul {
-    list-style: none;
-}
-
-.funding-table td ul li {
-    margin-bottom: 0.5rem;
-    position: relative;
-    padding-left: 1.25rem;
-    font-size: 0.88rem;
-    color: var(--text-muted-light);
-}
-
-.funding-table td ul li::before {
-    content: '•';
-    color: var(--accent-gold);
-    position: absolute;
-    left: 0;
-    font-size: 1.2rem;
-    top: -2px;
-}
-
-.price-col {
-    font-size: 1.15rem;
-    color: var(--accent-gold);
-    white-space: nowrap;
-}
-
-.recurring-label {
-    display: block;
-    font-size: 0.75rem;
-    color: var(--accent-gold);
-    font-weight: 500;
-    margin-top: 0.25rem;
-    opacity: 0.8;
-}
-
-.total-row {
-    background-color: rgba(255, 255, 255, 0.04);
-}
-
-.total-row td {
-    font-size: 1.1rem;
+.future-project-card h4 {
+    font-size: 1.25rem;
     color: var(--white);
-    border-bottom: none;
-    padding: 2rem;
+    margin-bottom: 0.75rem;
 }
 
-.total-row .price-col {
-    font-size: 1.35rem;
-    color: var(--accent-gold);
+.future-project-card p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
 }
 
 /* --- General Photo Gallery Section --- */
 .general-gallery-section {
     padding: 8rem 0;
-    background-color: var(--primary-green); color: var(--text-dark);
+    background-color: var(--secondary-green);
 }
 
 .gallery-masonry-grid {
@@ -1084,6 +1115,8 @@ img {
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
     height: 250px;
     border: 3px solid rgba(255,255,255,0.06);
+    cursor: pointer;
+    position: relative;
 }
 
 .gallery-photo-card img {
@@ -1095,6 +1128,80 @@ img {
 
 .gallery-photo-card:hover img {
     transform: scale(1.05);
+}
+
+.gallery-photo-card::after {
+    content: '\f065';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: white;
+    font-size: 1.5rem;
+    background: rgba(0,0,0,0.5);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    opacity: 0;
+}
+
+.gallery-photo-card:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+/* --- Lightbox --- */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.92);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+    cursor: pointer;
+}
+
+.lightbox-overlay img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    cursor: default;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    background: rgba(255,255,255,0.1);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.lightbox-close:hover {
+    background: rgba(255,255,255,0.2);
+    transform: scale(1.1);
 }
 
 /* --- Donate Section --- */
@@ -1109,8 +1216,8 @@ img {
 }
 
 .tax-benefit-box {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: var(--glass-backdrop);
     padding: 1.75rem;
     border-radius: var(--border-radius);
@@ -1134,8 +1241,8 @@ img {
 
 /* Donation Card & Methods */
 .donate-card {
-    background: rgba(10, 31, 20, 0.2);
-    border: 1px solid var(--glass-border);
+    background: rgba(10, 31, 20, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: var(--glass-backdrop);
     padding: 3rem 2.5rem;
     border-radius: var(--border-radius);
@@ -1366,8 +1473,8 @@ img {
 
 /* Contact Form */
 .contact-form {
-    background: rgba(10, 31, 20, 0.2);
-    border: 1px solid var(--glass-border);
+    background: rgba(10, 31, 20, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: var(--glass-backdrop);
     padding: 3rem 2.5rem;
     border-radius: var(--border-radius);
@@ -1434,7 +1541,7 @@ img {
     font-size: 0.8rem;
     font-weight: 600;
     color: var(--accent-gold);
-    background-color: #0c2b1c;
+    background-color: var(--primary-green);
     padding: 0 0.5rem;
 }
 
@@ -1455,7 +1562,7 @@ img {
 
 /* --- Footer --- */
 .main-footer {
-    background-color: var(--primary-green);
+    background-color: #061510;
     color: rgba(255, 255, 255, 0.7);
     padding: 6rem 0 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -1616,7 +1723,6 @@ img {
     }
     
     .about-text-container {
-        padding-left: 0;
         margin-top: 3rem;
     }
     
@@ -1629,20 +1735,8 @@ img {
         grid-column: 1;
     }
     
-    .about-section,
-    .mission-section,
-    .certifications-section,
-    .support-matters-section,
-    .projects-section,
-    .bbnda-collaboration-section,
-    .funding-section,
-    .donate-section,
-    .contact-section {
-        background-attachment: scroll; /* Disable parallax on mobile */
-    }
-    
     .floating-donate-btn {
-        display: none; /* Hide floating button on mobile */
+        display: none;
     }
 }
 
@@ -1676,7 +1770,7 @@ img {
         width: 80%;
         max-width: 300px;
         height: 100vh;
-        background-color: var(--primary-green); color: var(--text-dark);
+        background-color: var(--primary-green);
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -1731,6 +1825,33 @@ img {
         flex-direction: column;
         text-align: center;
     }
+    
+    .logo-title {
+        font-size: 2.2rem;
+    }
+    
+    .logo-subtitle {
+        font-size: 0.75rem;
+        white-space: normal;
+    }
+    
+    .logo-img {
+        height: 55px;
+    }
+    
+    /* Mobile background photo sizing */
+    .about-section,
+    .mission-section,
+    .certifications-section,
+    .support-matters-section,
+    .projects-section,
+    .bbnda-collaboration-section,
+    .future-projects-section,
+    .donate-section,
+    .contact-section {
+        background-size: cover;
+        background-position: center center;
+    }
 }
 
 @media (max-width: 576px) {
@@ -1754,17 +1875,8 @@ img {
     .donate-card {
         padding: 2rem 1.5rem;
     }
+    
+    .section-title {
+        font-size: 2rem;
+    }
 }
-
-/* Future Projects Section */
-.future-projects-section { padding: 8rem 0; background-color: var(--primary-green); }
-.future-grid { margin-top: 4rem; gap: 2rem; }
-.future-project-card { background: var(--glass-bg); border: 1px solid var(--glass-border); backdrop-filter: var(--glass-backdrop); padding: 2.5rem 2rem; border-radius: var(--border-radius); text-align: center; transition: var(--transition); height: 100%; }
-.future-project-card:hover { transform: translateY(-8px); background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.3); box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
-.future-icon { width: 70px; height: 70px; background-color: var(--accent-terracotta); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2rem; transition: var(--transition); }
-.future-project-card:hover .future-icon { transform: scale(1.1); }
-.future-project-card h4 { font-size: 1.25rem; color: var(--white); margin-bottom: 0.75rem; }
-.future-project-card p { font-size: 0.9rem; color: rgba(255, 255, 255, 0.8); line-height: 1.6; }
-
-.lightbox { animation: fadeIn 0.3s ease; }
-.gallery-photo-card { cursor: pointer; }

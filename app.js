@@ -1,4 +1,4 @@
-﻿/* ==========================================================================
+/* ==========================================================================
    SEGA NGO WEBSITE - INTERACTION LOGIC
    ========================================================================== */
 
@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initStatsCounter();
     initProjectTabs();
     initRazorpay();
+    initLightbox();
 });
 
 /* --- 1. Sticky Header Logic --- */
@@ -296,4 +297,44 @@ function handleContactSubmit(event) {
             feedback.className = 'form-feedback';
         }, 6000);
     }, 1500);
+}
+
+/* --- 11. Lightbox Gallery --- */
+function initLightbox() {
+    const galleryCards = document.querySelectorAll('.gallery-photo-card');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const closeBtn = document.getElementById('lightboxClose');
+
+    if (!lightbox || !lightboxImg) return;
+
+    galleryCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const img = card.querySelector('img');
+            if (img) {
+                lightboxImg.src = img.src;
+                lightbox.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            }
+        });
+    });
+
+    const closeLightbox = () => {
+        lightbox.style.display = 'none';
+        document.body.style.overflow = '';
+    };
+
+    if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+    
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            closeLightbox();
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.style.display === 'flex') {
+            closeLightbox();
+        }
+    });
 }

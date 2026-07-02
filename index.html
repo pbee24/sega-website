@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -371,65 +371,37 @@
         </div>
     </section>
 
-    <!-- Project Scope & Funding Section (Styled after PDF Page 11) -->
-    <section id="funding" class="funding-section">
+    <!-- Future Projects Section -->
+    <section id="future" class="future-projects-section">
         <div class="container">
             <div class="section-header text-center">
-                <span class="section-pretitle">Project Scope</span>
-                <h2 class="section-title text-serif">Funding Requirements: Year 1</h2>
+                <span class="section-pretitle">Looking Ahead</span>
+                <h2 class="section-title text-serif">Future Projects</h2>
                 <div class="section-underline center"></div>
-                <p class="section-subtitle">Key development projects identified for strategic funding and corporate support to ensure long-term sustainability.</p>
+                <p class="section-subtitle">Our vision for an integrated, self-sustaining ecosystem built on organic practices and rural empowerment.</p>
             </div>
 
-            <div class="table-responsive">
-                <table class="funding-table">
-                    <thead>
-                        <tr>
-                            <th>Project Component</th>
-                            <th>Purpose & Impact</th>
-                            <th class="text-right">Estimated Cost (₹)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="font-bold">Water Storage & Piping System</td>
-                            <td>
-                                <ul>
-                                    <li>Construction of a 2 lakh-liter water storage tank.</li>
-                                    <li>Installation of water piping to carry water uphill.</li>
-                                    <li>Ensuring sustainable water supply for cattle and afforestation.</li>
-                                </ul>
-                            </td>
-                            <td class="price-col text-right font-bold">₹25 Lakh</td>
-                        </tr>
-                        <tr>
-                            <td class="font-bold">Road Development to Hill Area</td>
-                            <td>
-                                <ul>
-                                    <li>Construction of an access road to transport fodder, veterinary aid, and staff.</li>
-                                    <li>Terrain stabilization to prevent monsoon erosion.</li>
-                                    <li>Improved accessibility for sustainable land and cattle management.</li>
-                                </ul>
-                            </td>
-                            <td class="price-col text-right font-bold">₹50 Lakh</td>
-                        </tr>
-                        <tr>
-                            <td class="font-bold">Annual Maintenance & Sustainability</td>
-                            <td>
-                                <ul>
-                                    <li>Upkeep of water storage and piping systems.</li>
-                                    <li>Road maintenance to withstand seasonal changes.</li>
-                                    <li>Afforestation efforts to develop green cover and improve soil health.</li>
-                                </ul>
-                            </td>
-                            <td class="price-col text-right font-bold">₹25 Lakh <span class="recurring-label">(Recurring)</span></td>
-                        </tr>
-                        <tr class="total-row">
-                            <td colspan="2" class="font-bold">Total CSR Funding Requirement (First Year)</td>
-                            <td class="price-col text-right font-bold">₹1 Crore</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="grid grid-3-col future-grid">
+                <!-- Project 1 -->
+                <div class="future-project-card">
+                    <div class="future-icon"><i class="fa-solid fa-leaf"></i></div>
+                    <h4>CBG & Bio-Gas Units</h4>
+                    <p>Setting up Compressed Bio-Gas plants at Gau Sadans to convert cattle waste into clean energy, reducing carbon footprint.</p>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="future-project-card">
+                    <div class="future-icon"><i class="fa-solid fa-cubes"></i></div>
+                    <h4>Gaucrete (Eco Bricks)</h4>
+                    <p>Producing eco-friendly bricks from cow dung that naturally reduce indoor temperatures by 10-15°C, providing sustainable housing materials.</p>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="future-project-card">
+                    <div class="future-icon"><i class="fa-solid fa-dove"></i></div>
+                    <h4>Cow Dung Birdhouses</h4>
+                    <p>Manufacturing biodegradable birdhouses and plant pots to increase green cover, support local wildlife, and employ rural communities.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -620,9 +592,12 @@
     <!-- Footer -->
     <footer class="main-footer">
         <div class="container footer-top grid grid-4-col">
-            <div class="footer-col-about">
-                <img src="images/logo.png.png" alt="SEGA Logo" class="footer-logo">
-                <p class="footer-about-text">Swavlambi Entrepreneur's Global Association is dedicated to animal welfare, organic farming, and rural livelihoods in Himachal Pradesh.</p>
+                <div class="footer-col about-col">
+                    <div class="footer-logo-wrapper" style="display: flex; align-items: center; gap: 15px; margin-bottom: 1.5rem;">
+                        <img src="images/logo.png.png" alt="SEGA Logo" class="footer-logo" style="margin-bottom: 0;">
+                        <h2 style="color: white; font-family: 'Bebas Neue', sans-serif; letter-spacing: 2px; font-size: 2.2rem; margin: 0; line-height: 1;">SEGA</h2>
+                    </div>
+                    <p class="footer-about-text">A non-profit organization dedicated to the welfare of stray cattle and the sustainable development of rural ecosystems in Himachal Pradesh.</p>
                 <div class="footer-socials">
                     <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
@@ -638,7 +613,7 @@
                     <li><a href="#mission">Our Mission</a></li>
                     <li><a href="#certifications">Certifications</a></li>
                     <li><a href="#projects">Sanctuaries</a></li>
-                    <li><a href="#funding">Funding Scope</a></li>
+                    <li><a href="#future">Future Projects</a></li>
                 </ul>
             </div>
 
@@ -674,6 +649,12 @@
             </div>
         </div>
     </footer>
+
+    <!-- Lightbox Modal for Gallery -->
+    <div id="lightbox" class="lightbox-overlay" style="display: none;">
+        <button class="lightbox-close" id="lightboxClose">&times;</button>
+        <img id="lightboxImg" src="" alt="Enlarged gallery image">
+    </div>
 
     <!-- Razorpay Checkout Script -->
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
