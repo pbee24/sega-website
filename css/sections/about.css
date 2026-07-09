@@ -1,0 +1,158 @@
+/* --- Section Parallax & Alternating Overlays --- */
+.about-section,
+.mission-section,
+.certifications-section,
+.support-matters-section,
+.projects-section,
+.bbnda-collaboration-section,
+.future-projects-section,
+.donate-section,
+.contact-section {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 8rem 0;
+    color: var(--white);
+}
+
+/* Sections with heavy dark overlay for readability */
+.about-section {
+    background-image: linear-gradient(rgba(10, 31, 20, 0.82), rgba(10, 31, 20, 0.88)), url('../../assets/images/gallery/sega-ngo-about-us-background.jpg');
+    padding-top: 12rem;
+}
+
+.support-matters-section {
+    background-image: linear-gradient(rgba(10, 31, 20, 0.82), rgba(10, 31, 20, 0.88)), url('../../assets/images/gallery/support-cattle-welfare-ngo-india.jpg');
+}
+
+.projects-section {
+    background-image: linear-gradient(rgba(10, 31, 20, 0.85), rgba(10, 31, 20, 0.9)), url('../../assets/images/handakundi/aerial-view-handakundi-cattle-sanctuary.jpg');
+}
+
+.contact-section {
+    background-image: linear-gradient(rgba(10, 31, 20, 0.85), rgba(10, 31, 20, 0.9)), url('../../assets/images/gallery/contact-sega-ngo-solan.jpg');
+}
+
+/* Terracotta accent sections */
+.certifications-section {
+    background-image: linear-gradient(rgba(100, 15, 10, 0.85), rgba(10, 31, 20, 0.92)), url('../../assets/images/gallery/support-cattle-welfare-ngo-india.jpg');
+}
+
+.bbnda-collaboration-section {
+    background-image: linear-gradient(rgba(100, 15, 10, 0.85), rgba(10, 31, 20, 0.92)), url('../../assets/images/handakundi/handakundi-sanctuary-infrastructure.jpg');
+}
+
+.donate-section {
+    background-image: linear-gradient(rgba(100, 15, 10, 0.85), rgba(10, 31, 20, 0.92)), url('../../assets/images/neripul/neripul-gau-sadan-cow-rehabilitation-centre.jpg');
+}
+
+/* Forest green sections */
+.mission-section {
+    background-image: linear-gradient(rgba(10, 31, 20, 0.88), rgba(10, 31, 20, 0.92)), url('../../assets/images/gallery/sustainable-gaushala-sheds-himachal.jpg');
+}
+
+.future-projects-section {
+    background-image: linear-gradient(rgba(10, 31, 20, 0.88), rgba(10, 31, 20, 0.92)), url('../../assets/images/gallery/future-projects-eco-bricks-biogas.jpg');
+}
+
+/* --- Glass Panels --- */
+.glass-panel {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: var(--glass-backdrop);
+    -webkit-backdrop-filter: var(--glass-backdrop);
+    padding: 3rem 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* --- About Us Collage --- */
+.about-collage {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    height: 420px;
+}
+
+.collage-img {
+    position: absolute;
+    border-radius: var(--border-radius);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    object-fit: cover;
+    border: 5px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+}
+
+.collage-img.img-1 {
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 75%;
+    z-index: 1;
+}
+
+.collage-img.img-2 {
+    bottom: 0;
+    right: 0;
+    width: 70%;
+    height: 70%;
+    z-index: 2;
+}
+
+.about-collage:hover .collage-img.img-1 {
+    transform: scale(0.98) translate(-10px, -10px);
+}
+
+.about-collage:hover .collage-img.img-2 {
+    transform: scale(1.02) translate(10px, 10px);
+}
+
+.collage-badge {
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+    background-color: var(--bright-green);
+    color: var(--white);
+    padding: 1.25rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 130px;
+    border-bottom: 4px solid var(--accent-gold);
+    z-index: 3;
+}
+
+.badge-num {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.badge-text {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0.25rem;
+}
+
+.about-paragraph {
+    font-size: 0.98rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 1.5rem;
+}
+
+.about-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--accent-gold);
+    border-left: 4px solid var(--accent-terracotta);
+    padding-left: 1.5rem;
+    margin: 2.25rem 0;
+    font-weight: 600;
+    line-height: 1.5;
+}

@@ -1,0 +1,187 @@
+/* --- Responsive Media Queries --- */
+@media (max-width: 1250px) {
+    .nav-menu {
+        gap: 0.65rem;
+    }
+    
+    .nav-link {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.15rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .grid-3-col {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .grid-4-col {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .gallery-masonry-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .about-section {
+        padding: 10rem 0 5rem;
+    }
+    
+    .about-text-container {
+        margin-top: 3rem;
+    }
+    
+    .project-card, .project-card.reverse {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .project-card.reverse .project-image-gallery {
+        grid-column: 1;
+    }
+    
+    .floating-donate-btn {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-2-col {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .mobile-nav-toggle {
+        display: block;
+        z-index: 1100;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: var(--primary-green);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+        padding: 2rem;
+        transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .mobile-nav-toggle.active .bar:nth-child(1) {
+        transform: translateY(7.5px) rotate(45deg);
+    }
+    
+    .mobile-nav-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .mobile-nav-toggle.active .bar:nth-child(3) {
+        transform: translateY(-7.5px) rotate(-45deg);
+    }
+    
+    .stats-container {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.75rem;
+    }
+    
+    .stat-divider {
+        width: 80%;
+        height: 1px;
+    }
+    
+    .bbnda-text-col {
+        padding-left: 0;
+        margin-top: 3rem;
+    }
+    
+    .donate-info {
+        padding-right: 0;
+    }
+    
+    .contact-info-column {
+        padding-right: 0;
+        margin-bottom: 3rem;
+    }
+    
+    .footer-bottom-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .logo-title {
+        font-size: 2.2rem;
+    }
+    
+    .logo-subtitle {
+        font-size: 0.75rem;
+        white-space: normal;
+    }
+    
+    .logo-img {
+        height: 55px;
+    }
+    
+    /* Mobile background photo sizing */
+    .about-section,
+    .mission-section,
+    .certifications-section,
+    .support-matters-section,
+    .projects-section,
+    .bbnda-collaboration-section,
+    .future-projects-section,
+    .donate-section,
+    .contact-section {
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+@media (max-width: 576px) {
+    .grid-3-col, .grid-4-col, .gallery-masonry-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-collage {
+        height: 350px;
+    }
+    
+    .collage-badge {
+        bottom: 20px;
+        left: 10px;
+    }
+    
+    .amount-presets {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .donate-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}

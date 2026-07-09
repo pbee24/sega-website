@@ -1,0 +1,8 @@
+# robots.txt for SEGA - Swavlambi Entrepreneur's Global Association
+# https://segaindia.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://segaindia.com/sitemap.xml

@@ -1,0 +1,27 @@
+/* ==========================================================================
+   SEGA NGO WEBSITE - PREMIUM STYLESHEET v3
+   Clean, Elegant Design inspired by Rainforest Trust
+   ========================================================================== */
+
+/* --- CSS Variables & Design System --- */
+:root {
+    --primary-green: #0a1f14;
+    --secondary-green: #113824;
+    --accent-green: #1e5c3f;
+    --bright-green: #2d8a5c;
+    --accent-terracotta: #c0392b;
+    --accent-terracotta-hover: #962d22;
+    --accent-gold: #d4af37;
+    --bg-cream: #f9fbf9;
+    --text-dark: #1a2e23;
+    --text-light: #ffffff;
+    --text-muted: #6b7c72;
+    --text-muted-light: rgba(255, 255, 255, 0.7);
+    --white: #ffffff;
+    --glass-bg: rgba(10, 31, 20, 0.65);
+    --glass-border: rgba(255, 255, 255, 0.12);
+    --glass-backdrop: blur(15px);
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    --border-radius-sm: 6px;
+    --border-radius: 12px;
+}

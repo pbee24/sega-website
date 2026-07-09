@@ -1,0 +1,58 @@
+/* --- Future Projects Section --- */
+.future-projects-section {
+    padding: 8rem 0;
+}
+
+.future-grid {
+    margin-top: 4rem;
+    gap: 2rem;
+}
+
+.future-project-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: var(--glass-backdrop);
+    -webkit-backdrop-filter: var(--glass-backdrop);
+    padding: 2.5rem 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: var(--transition);
+    height: 100%;
+}
+
+.future-project-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.future-icon {
+    width: 70px;
+    height: 70px;
+    background-color: var(--accent-terracotta);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+    transition: var(--transition);
+}
+
+.future-project-card:hover .future-icon {
+    transform: scale(1.1);
+}
+
+.future-project-card h4 {
+    font-size: 1.25rem;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+}
+
+.future-project-card p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}

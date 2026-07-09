@@ -1,0 +1,161 @@
+/* --- Floating Donate Tab (Rainforest Trust Style) --- */
+.floating-donate-btn {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: right bottom;
+    background-color: var(--accent-terracotta);
+    color: var(--white);
+    padding: 0.85rem 1.75rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.8rem;
+    border-radius: 8px 8px 0 0;
+    z-index: 999;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: none;
+}
+
+.floating-donate-btn:hover {
+    background-color: var(--accent-terracotta-hover);
+    padding-bottom: 1.1rem;
+}
+
+/* --- Header / Navigation --- */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(10, 31, 20, 0.15);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    transition: var(--transition);
+}
+
+.main-header.scrolled {
+    background-color: var(--primary-green);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    padding: 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 95px;
+    transition: var(--transition);
+    max-width: 1350px;
+    padding: 0 1.5rem;
+}
+
+.main-header.scrolled .header-container {
+    height: 70px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
+.logo-img {
+    height: 72px;
+    width: auto;
+    object-fit: contain;
+    background-color: var(--white);
+    border-radius: 50%;
+    padding: 3px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.8rem;
+    color: var(--white);
+    line-height: 0.95;
+    letter-spacing: 3px;
+}
+
+.logo-subtitle {
+    font-family: 'Crimson Pro', serif;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.85);
+    letter-spacing: 0.3px;
+    margin-top: 2px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-link {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    padding: 0.4rem 0.25rem;
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    color: var(--white);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-gold);
+    transition: var(--transition);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-btn {
+    margin-left: 0.25rem;
+    padding: 0.5rem 1.15rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.mobile-nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.mobile-nav-toggle .bar {
+    display: block;
+    width: 24px;
+    height: 2px;
+    margin: 5px auto;
+    background-color: var(--white);
+    transition: var(--transition);
+}

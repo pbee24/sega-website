@@ -1,0 +1,55 @@
+/* --- Why Your Support Matters Section --- */
+.support-quote-box {
+    border-left: 3px solid var(--accent-gold);
+    padding-left: 1.5rem;
+    margin-top: 2rem;
+}
+
+.support-description {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 1.5rem;
+}
+
+.highlight-quote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--accent-gold);
+}
+
+.support-points-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+}
+
+.support-point-block {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: var(--glass-backdrop);
+    padding: 1.15rem 1.5rem;
+    border-radius: var(--border-radius-sm);
+    display: flex;
+    align-items: center;
+    gap: 1.15rem;
+    font-weight: 600;
+    color: var(--white);
+    font-size: 0.92rem;
+    transition: var(--transition);
+}
+
+.support-point-block:hover {
+    background-color: var(--bright-green);
+    border-color: var(--bright-green);
+    transform: translateX(8px);
+}
+
+.support-point-icon {
+    color: var(--accent-gold);
+    font-size: 0.85rem;
+}
+
+.support-point-block:hover .support-point-icon {
+    color: var(--white);
+}

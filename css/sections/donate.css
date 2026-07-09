@@ -1,0 +1,213 @@
+/* --- Donate Section --- */
+.donate-info {
+    padding-right: 3rem;
+}
+
+.donate-text {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 2.5rem;
+}
+
+.tax-benefit-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: var(--glass-backdrop);
+    padding: 1.75rem;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.tax-benefit-box i {
+    font-size: 2rem;
+    color: var(--accent-gold);
+    margin-top: 2px;
+}
+
+.tax-benefit-box p {
+    font-size: 0.95rem;
+    color: var(--text-muted-light);
+    line-height: 1.5;
+}
+
+/* Donation Card & Methods */
+.donate-card {
+    background: rgba(10, 31, 20, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: var(--glass-backdrop);
+    padding: 3rem 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    border-top: 5px solid var(--accent-terracotta);
+}
+
+.donate-card-title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.donate-method-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 0.35rem;
+    border-radius: 50px;
+    margin-bottom: 2rem;
+}
+
+.donate-method-btn {
+    background: none;
+    border: none;
+    padding: 0.75rem 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    border-radius: 50px;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.donate-method-btn.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.donate-method-content {
+    display: none;
+}
+
+.donate-method-content.active {
+    display: block;
+    animation: fadeIn 0.4s ease;
+}
+
+.method-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted-light);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Presets */
+.amount-presets {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.amount-preset-btn {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 0.75rem 0.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--white);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.amount-preset-btn:hover, .amount-preset-btn.active {
+    background-color: var(--accent-terracotta);
+    border-color: var(--accent-terracotta);
+    color: var(--white);
+}
+
+/* Custom Input */
+.custom-amount-wrapper {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.currency-symbol {
+    position: absolute;
+    left: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+#customAmountInput {
+    width: 100%;
+    padding: 1rem 1rem 1rem 2.5rem;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.05);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+    outline: none;
+    transition: var(--transition);
+}
+
+#customAmountInput:focus {
+    border-color: var(--bright-green);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Bank Details Box */
+.bank-details-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.bank-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bank-row:last-child {
+    border-bottom: none;
+}
+
+.bank-label {
+    font-size: 0.85rem;
+    color: var(--text-muted-light);
+    font-weight: 500;
+}
+
+.bank-value {
+    font-size: 0.95rem;
+    color: var(--white);
+    text-align: right;
+    word-break: break-all;
+    max-width: 70%;
+}
+
+.copy-btn {
+    background: none;
+    border: none;
+    color: var(--accent-gold);
+    cursor: pointer;
+    padding: 0.25rem;
+    margin-left: 0.5rem;
+    font-size: 1.1rem;
+    transition: var(--transition);
+}
+
+.copy-btn:hover {
+    color: var(--white);
+    transform: scale(1.15);
+}

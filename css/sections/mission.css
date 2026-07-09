@@ -1,0 +1,66 @@
+/* --- Our Mission Section --- */
+.mission-grid {
+    margin-top: 4rem;
+    gap: 2rem;
+}
+
+.mission-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: var(--glass-backdrop);
+    -webkit-backdrop-filter: var(--glass-backdrop);
+    padding: 2.5rem 2rem;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+    height: 100%;
+}
+
+.mission-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.mission-num-badge {
+    width: 44px;
+    height: 44px;
+    background-color: var(--bright-green);
+    color: var(--white);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.15rem;
+    flex-shrink: 0;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+.mission-num-badge::after {
+    content: '';
+    position: absolute;
+    right: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 5px 0 5px 6px;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--bright-green);
+}
+
+.mission-card-content h4 {
+    font-size: 1.1rem;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.mission-card-content p {
+    font-size: 0.88rem;
+    color: var(--text-muted-light);
+    line-height: 1.6;
+}

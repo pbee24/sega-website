@@ -1,0 +1,131 @@
+/* --- Our Projects Section --- */
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    margin-top: 3.5rem;
+}
+
+.project-card {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 3.5rem;
+    align-items: flex-start;
+}
+
+.project-card.reverse {
+    grid-template-columns: 1fr 1.1fr;
+}
+
+.project-card.reverse .project-image-gallery {
+    grid-column: 2;
+}
+
+.project-card.reverse .project-details {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.main-project-img-wrapper {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    height: 360px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+.main-project-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.project-thumbnails {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.project-thumbnails img.thumb {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 2px solid rgba(255,255,255,0.1);
+    opacity: 0.5;
+    transition: var(--transition);
+}
+
+.project-thumbnails img.thumb:hover, .project-thumbnails img.thumb.active {
+    opacity: 1;
+    border-color: var(--accent-gold);
+    transform: translateY(-2px);
+}
+
+.project-details {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-details h3 {
+    font-size: 2rem;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+}
+
+.project-status-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--bright-green);
+    margin-bottom: 0.75rem;
+}
+
+.project-meta-info {
+    font-size: 0.85rem;
+    color: var(--text-muted-light);
+    margin-bottom: 1rem;
+}
+
+.project-text-desc {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.7;
+}
+
+.project-spec-list {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.project-spec-list li {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: rgba(255,255,255,0.9);
+}
+
+.project-spec-list li i {
+    color: var(--accent-gold);
+    font-size: 1.1rem;
+}
+
+.project-actions {
+    margin-top: 1.5rem;
+}
+
+.btn-map-link {
+    font-size: 0.8rem;
+    padding: 0.65rem 1.25rem;
+}
